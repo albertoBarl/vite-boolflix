@@ -1,8 +1,8 @@
 <template lang="">
   <div class="myCard bg-danger">
-    <p>{{ movie.title }}</p>
-    <p>{{ movie.original_title }}</p>
-    <span> {{ movie.original_language }}</span
+    <h4>{{ movie.title }}</h4>
+    <p>"{{ movie.original_title }}"</p>
+    <span>{{ movie.original_language }}</span
     ><br />
     <span>{{ movie.vote_average }}</span>
   </div>
@@ -16,7 +16,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .myCard {
-  width: 200px;
+  width: calc(90% / 5);
   height: 300px;
 }
 </style>

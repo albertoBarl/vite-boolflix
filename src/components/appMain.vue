@@ -1,16 +1,12 @@
 <template lang="">
-  <div
-    class="movie-list container-fluid d-flex flex-row flex-wrap overflow-auto bg-dark gap-3"
-  >
+  <div class="myList container-fluid">
     <movieCard
       v-for="(item, index) in store.movieList"
       :key="index"
       :movie="item"
     />
   </div>
-  <div
-    class="tv-list container-fluid d-flex flex-row flex-wrap overflow-auto bg-dark gap-3 mt-3"
-  >
+  <div class="myList container-fluid">
     <TVCard v-for="(item, index) in store.TVList" :key="index" :tv="item" />
   </div>
 </template>
@@ -31,12 +27,16 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.movie-list {
-  height: 400px;
+.myList {
+  height: 350px;
   width: 80vw;
-}
-.tv-list {
-  height: 400px;
-  width: 80vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
+  background-color: black;
+  gap: 10px;
+  margin-top: 25px;
+  padding: 15px;
 }
 </style>
