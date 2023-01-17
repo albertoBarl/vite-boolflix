@@ -14,4 +14,9 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+div.card {
+  width: 200px;
+  height: 300px;
+}
+</style>

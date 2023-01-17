@@ -2,7 +2,7 @@
   <div class="bg-dark p-2">
     <appHeader @search="getMovieList" />
   </div>
-  <appMain />
+  <appMain class="mt-3 p-3" />
 </template>
 <script>
 import { store } from "./datas/store.js";

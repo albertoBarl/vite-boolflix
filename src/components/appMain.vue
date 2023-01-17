@@ -1,5 +1,7 @@
 <template lang="">
-  <div class="d-flex">
+  <div
+    class="movie-list container bg-dark justify-content-center d-flex flex-row flex-wrap gap-3"
+  >
     <movieCard
       v-for="(item, index) in store.movieList"
       :key="index"
@@ -21,4 +23,9 @@ export default {
   },
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.movie-list {
+  height: 400px;
+  overflow-x: auto;
+}
+</style>
