@@ -1,6 +1,6 @@
 <template lang="">
   <div class="bg-dark p-2">
-    <appHeader @search="getMovieList" />
+    <appHeader @search="getLists" />
   </div>
   <appMain class="mt-3 p-3" />
 </template>
@@ -21,13 +21,17 @@ export default {
     };
   },
   created() {
-    this.getMovieList();
+    this.getLists();
   },
   methods: {
-    getMovieList() {
-      let myUrl = `${store.url}${store.movieQuery}`;
-      axios.get(myUrl).then((response) => {
+    getLists() {
+      let movieUrl = `${store.movieUrl}${store.theQuery}`;
+      axios.get(movieUrl).then((response) => {
         store.movieList = response.data.results;
+      });
+      let tvUrl = `${store.tvUrl}${store.theQuery}`;
+      axios.get(tvUrl).then((response) => {
+        store.TVList = response.data.results;
       });
     },
   },

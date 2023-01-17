@@ -3,8 +3,9 @@
     <input
       type="text"
       class="form-control"
-      v-model="store.movieQuery"
-      @change="$emit('search')"
+      v-model="store.theQuery"
+      @keyup="$emit('search')"
+      placeholder="Cerca..."
     />
     <button type="submit" class="btn btn-body">CERCA</button>
   </div>

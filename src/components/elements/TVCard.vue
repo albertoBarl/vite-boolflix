@@ -1,16 +1,16 @@
 <template lang="">
   <div class="myCard bg-danger">
-    <p>{{ movie.title }}</p>
-    <p>{{ movie.original_title }}</p>
-    <span> {{ movie.original_language }}</span
+    <p>{{ tv.name }}</p>
+    <p>{{ tv.original_name }}</p>
+    <span> {{ tv.original_language }}</span
     ><br />
-    <span>{{ movie.vote_average }}</span>
+    <span>{{ tv.vote_average }}</span>
   </div>
 </template>
 <script>
 export default {
   props: {
-    movie: Object,
+    tv: Object,
   },
 };
 </script>
