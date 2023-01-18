@@ -1,6 +1,7 @@
 @use "../../styles/partials/variables" as *;
 
 @mixin cardStructure {
+  border-radius: 7px;
   background-color: $red-flix;
   min-width: calc(100% / 5);
   height: 400px;
@@ -24,6 +25,7 @@
     .myTitle {
       width: 100%;
       height: max-content;
+      margin-bottom: 25px;
     }
     img.myLogo {
       width: 25px;

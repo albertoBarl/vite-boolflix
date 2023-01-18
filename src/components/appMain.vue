@@ -37,7 +37,7 @@ export default {
   height: 400px;
   width: 80vw;
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   background-color: black;
   gap: 10px;
   margin-top: 25px;
