@@ -1,14 +1,20 @@
 <template lang="">
-  <div class="myList container-fluid">
-    <movieCard
-      v-for="(item, index) in store.movieList"
-      :key="index"
-      :movie="item"
-    />
-  </div>
-  <div class="myList container-fluid">
-    <TVCard v-for="(item, index) in store.TVList" :key="index" :tv="item" />
-  </div>
+  <section>
+    <h2 class="text-white">Movies</h2>
+    <div class="myList container-fluid">
+      <movieCard
+        v-for="(item, index) in store.movieList"
+        :key="index"
+        :movie="item"
+      />
+    </div>
+  </section>
+  <section class="mt-5">
+    <h2 class="text-white">TV Shows</h2>
+    <div class="myList container-fluid">
+      <TVCard v-for="(item, index) in store.TVList" :key="index" :tv="item" />
+    </div>
+  </section>
 </template>
 <script>
 import movieCard from "./elements/movieCard.vue";
