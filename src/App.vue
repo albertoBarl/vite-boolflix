@@ -7,8 +7,8 @@
   </div>
 </template>
 <script>
-import { store } from "./datas/store.js";
 import axios from "axios";
+import { store } from "./datas/store.js";
 import appHeader from "./components/appHeader.vue";
 import appMain from "./components/appMain.vue";
 
@@ -23,15 +23,15 @@ export default {
     };
   },
   created() {
-    this.getLists();
+    this.getLists("");
   },
   methods: {
-    getLists() {
-      let movieUrl = `${store.movieUrl}${store.theQuery}`;
+    getLists(query) {
+      let movieUrl = `${store.movieUrl}${query}`;
       axios.get(movieUrl).then((response) => {
         store.movieList = response.data.results;
       });
-      let tvUrl = `${store.tvUrl}${store.theQuery}`;
+      let tvUrl = `${store.tvUrl}${query}`;
       axios.get(tvUrl).then((response) => {
         store.TVList = response.data.results;
       });

@@ -3,20 +3,18 @@
     <input
       type="text"
       class="form-control"
-      v-model="store.theQuery"
-      @keyup="$emit('search')"
+      v-model="qValue"
+      @change="$emit('search', qValue)"
       placeholder="Cerca..."
     />
     <button type="submit" class="btn btn-body">CERCA</button>
   </div>
 </template>
 <script>
-import { store } from "../datas/store.js";
-
 export default {
   data() {
     return {
-      store,
+      qValue: "",
     };
   },
 };
