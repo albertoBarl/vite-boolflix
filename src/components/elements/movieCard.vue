@@ -15,7 +15,7 @@
         :src="`https://unpkg.com/language-icons/icons/${movie.original_language}.svg`"
       />
       <br />
-      <span>{{ movie.vote_average }}</span>
+      <span>Rating: {{ movie.vote_average }}</span>
     </div>
   </div>
 </template>
@@ -32,6 +32,7 @@ div {
   min-width: calc(100% / 5);
   height: 400px;
   position: relative;
+  overflow: auto;
   img {
     width: 100%;
     height: 100%;

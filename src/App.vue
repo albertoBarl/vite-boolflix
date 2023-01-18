@@ -2,7 +2,9 @@
   <div class="bg-dark p-2">
     <appHeader @search="getLists" />
   </div>
-  <appMain class="mt-3 p-3" />
+  <div class="bg-dark p-5">
+    <appMain />
+  </div>
 </template>
 <script>
 import { store } from "./datas/store.js";
