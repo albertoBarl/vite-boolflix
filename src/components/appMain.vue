@@ -28,15 +28,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .myList {
-  height: 350px;
+  height: 400px;
   width: 80vw;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  overflow: auto;
+  overflow-x: scroll;
   background-color: black;
   gap: 10px;
   margin-top: 25px;
-  padding: 15px;
 }
 </style>

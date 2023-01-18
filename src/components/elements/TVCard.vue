@@ -1,13 +1,22 @@
 <template lang="">
-  <div class="myCard bg-danger">
-    <h4>{{ tv.name }}</h4>
-    <p>"{{ tv.original_name }}"</p>
+  <div class="bg-danger">
     <img
-      :alt="`${tv.original_language}`"
-      :src="`https://unpkg.com/language-icons/icons/${tv.original_language}.svg`"
+      :src="`https://image.tmdb.org/t/p/w400${tv.poster_path}`"
+      alt="not available"
     />
-    <br />
-    <span>{{ tv.vote_average }}</span>
+    <div class="myCard">
+      <div class="myTitle">
+        <h4>{{ tv.name }}</h4>
+        <p>"{{ tv.original_name }}"</p>
+      </div>
+      <img
+        class="myLogo"
+        :alt="`${tv.original_language}`"
+        :src="`https://unpkg.com/language-icons/icons/${tv.original_language}.svg`"
+      />
+      <br />
+      <span>{{ tv.vote_average }}</span>
+    </div>
   </div>
 </template>
 <script>
@@ -18,12 +27,33 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.myCard {
-  width: calc(90% / 5);
-  height: 300px;
-  padding: 10px;
+div {
+  min-width: calc(100% / 5);
+  height: 400px;
+  position: relative;
   img {
-    width: 25px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    position: absolute;
+    &:active {
+      display: none;
+    }
+  }
+  .myCard {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    z-index: 1;
+    .myTitle {
+      width: 100%;
+      height: max-content;
+    }
+    img.myLogo {
+      width: 25px;
+      height: auto;
+    }
   }
 }
 </style>
