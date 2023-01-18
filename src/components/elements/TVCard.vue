@@ -1,9 +1,6 @@
 <template lang="">
   <div class="bg-danger">
-    <img
-      :src="`https://image.tmdb.org/t/p/w400${tv.poster_path}`"
-      alt="not available"
-    />
+    <img :src="`https://image.tmdb.org/t/p/w400${tv.poster_path}`" alt="-" />
     <div class="myCard">
       <div class="myTitle">
         <h4>{{ tv.name }}</h4>
@@ -27,34 +24,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@use "../../styles/generals.scss" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 div {
-  min-width: calc(100% / 5);
-  height: 400px;
-  position: relative;
-  overflow: auto;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 2;
-    position: absolute;
-    &:active {
-      display: none;
-    }
-  }
-  .myCard {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    z-index: 1;
-    .myTitle {
-      width: 100%;
-      height: max-content;
-    }
-    img.myLogo {
-      width: 25px;
-      height: auto;
-    }
-  }
+  @include cardStructure;
 }
 </style>

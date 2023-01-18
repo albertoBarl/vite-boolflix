@@ -1,0 +1,30 @@
+@mixin cardStructure {
+  min-width: calc(100% / 5);
+  height: 400px;
+  position: relative;
+  overflow: auto;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    position: absolute;
+    &:active {
+      display: none;
+    }
+  }
+  .myCard {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    z-index: 1;
+    .myTitle {
+      width: 100%;
+      height: max-content;
+    }
+    img.myLogo {
+      width: 25px;
+      height: auto;
+    }
+  }
+}
