@@ -1,8 +1,8 @@
 <template lang="">
-  <div class="bg-dark p-2">
+  <div class="p-2">
     <appHeader @search="getLists" />
   </div>
-  <div class="bg-dark p-5">
+  <div class="p-5">
     <appMain />
   </div>
 </template>

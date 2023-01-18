@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="bg-danger">
+  <div>
     <img :src="`https://image.tmdb.org/t/p/w400${tv.poster_path}`" alt="-" />
     <div class="myCard">
       <div class="myTitle">

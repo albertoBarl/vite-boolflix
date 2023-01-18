@@ -1,4 +1,7 @@
+@use "../../styles/partials/variables" as *;
+
 @mixin cardStructure {
+  background-color: $red-flix;
   min-width: calc(100% / 5);
   height: 400px;
   position: relative;
