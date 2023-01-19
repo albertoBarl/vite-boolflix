@@ -15,7 +15,7 @@
       <div>
         <span>Rating: {{ movie.vote_average }}</span>
         <div class="d-flex justify-content-start">
-          <span v-for="item in nStars">&star;</span>
+          <span v-for="item in nStars" class="fs-3">&star;</span>
         </div>
       </div>
     </div>
