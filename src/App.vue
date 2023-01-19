@@ -5,17 +5,23 @@
   <div class="p-5">
     <appMain />
   </div>
+  <div class="footer">
+    <appFooter />
+    <p>deisgned by A.B.</p>
+  </div>
 </template>
 <script>
 import axios from "axios";
 import { store } from "./datas/store.js";
 import appHeader from "./components/appHeader.vue";
 import appMain from "./components/appMain.vue";
+import appFooter from "./components/appFooter.vue";
 
 export default {
   components: {
     appHeader,
     appMain,
+    appFooter,
   },
   data() {
     return {
@@ -53,5 +59,20 @@ export default {
     rgba(54, 0, 112) 0%,
     rgba(0, 0, 0, 0.7749300403755253) 100%
   );
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  background: rgb(54, 0, 112);
+  background: linear-gradient(180deg, rgba(0, 0, 0) 0%, rgba(54, 0, 112) 100%);
+  p {
+    margin-top: 25px;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: xx-small;
+  }
 }
 </style>
