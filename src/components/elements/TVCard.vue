@@ -26,17 +26,9 @@ export default {
   props: {
     tv: Object,
   },
-  data() {
-    return {
-      nStars: null,
-    };
-  },
-  created() {
-    this.convStars();
-  },
-  methods: {
-    convStars() {
-      this.nStars = Math.round(this.tv.vote_average / 2);
+  computed: {
+    nStars() {
+      return Math.round(this.tv.vote_average / 2);
     },
   },
 };
