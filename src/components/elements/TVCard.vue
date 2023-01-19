@@ -12,7 +12,12 @@
         :src="`https://unpkg.com/language-icons/icons/${tv.original_language}.svg`"
       />
       <br />
-      <span>Rating: {{ tv.vote_average }}</span>
+      <div>
+        <span>Rating: {{ tv.vote_average }}</span>
+        <div class="d-flex justify-content-start">
+          <span v-for="item in nStars">&star;</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +25,19 @@
 export default {
   props: {
     tv: Object,
+  },
+  data() {
+    return {
+      nStars: null,
+    };
+  },
+  created() {
+    this.convStars();
+  },
+  methods: {
+    convStars() {
+      this.nStars = Math.round(this.tv.vote_average / 2);
+    },
   },
 };
 </script>

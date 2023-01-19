@@ -12,7 +12,12 @@
         :src="`https://unpkg.com/language-icons/icons/${movie.original_language}.svg`"
       />
       <br />
-      <span>Rating: {{ movie.vote_average }}</span>
+      <div>
+        <span>Rating: {{ movie.vote_average }}</span>
+        <div class="d-flex justify-content-start">
+          <span v-for="item in nStars">&star;</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -21,7 +26,19 @@ export default {
   props: {
     movie: Object,
   },
-  methods: {},
+  data() {
+    return {
+      nStars: null,
+    };
+  },
+  created() {
+    this.convStars();
+  },
+  methods: {
+    convStars() {
+      this.nStars = Math.round(this.movie.vote_average / 2);
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

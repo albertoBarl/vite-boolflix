@@ -23,7 +23,7 @@ export default {
     };
   },
   created() {
-    this.getLists("");
+    this.getLists();
   },
   methods: {
     getLists(query) {
