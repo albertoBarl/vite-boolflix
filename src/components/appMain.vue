@@ -44,11 +44,12 @@ export default {
 }
 
 h2 {
+  color: white;
   padding: 10px;
-  background: rgb(0, 182, 0);
+  background: rgb(54, 0, 112);
   background: linear-gradient(
     90deg,
-    rgba(0, 182, 0, 1) 0%,
+    rgb(54, 0, 112) 0%,
     rgba(0, 0, 0, 0.7749300403755253) 33%
   );
 }

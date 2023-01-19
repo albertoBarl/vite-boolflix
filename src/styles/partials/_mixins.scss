@@ -1,6 +1,7 @@
 @use "../../styles/partials/variables" as *;
 
 @mixin cardStructure {
+  color: white;
   border-radius: 9px;
   background-color: $color-flix;
   min-width: calc(100% / 5);

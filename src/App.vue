@@ -47,10 +47,10 @@ export default {
 .header {
   padding-top: 25px;
   height: 250px;
-  background: rgb(0, 182, 0);
+  background: rgb(54, 0, 112);
   background: linear-gradient(
     180deg,
-    rgba(0, 182, 0, 1) 0%,
+    rgba(54, 0, 112) 0%,
     rgba(0, 0, 0, 0.7749300403755253) 100%
   );
 }

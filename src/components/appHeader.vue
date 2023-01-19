@@ -2,14 +2,14 @@
   <div
     class="container-fluid d-flex justify-content-center align-items-center ps-5 gap-5"
   >
-    <div>
+    <a href="/">
       <img
         src="/src/assets/img/b-logo-png-transparent.png"
         class="logo"
         alt=""
       />
-    </div>
-    <div class="search form-control d-flex" style="height: 75px; width: 500px">
+    </a>
+    <div class="search form-control" style="height: 75px; width: 500px">
       <input
         type="text"
         class="form-control border-0"
@@ -19,12 +19,26 @@
       />
       <button type="submit" class="btn btn-body">SEARCH</button>
     </div>
+    <div class="d-flex gap-5">
+      <select name="" id="" class="p-1">
+        <option v-for="item in store.movieGens">{{ item.name }}</option>
+      </select>
+      <a
+        href="/"
+        class="d-flex flex-column align-items-center text-decoration-none text-white"
+      >
+        <i class="fa-solid fa-user text-white fs-1"></i><label>LOGIN</label>
+      </a>
+    </div>
   </div>
 </template>
 <script>
+import { store } from "../datas/store.js";
+
 export default {
   data() {
     return {
+      store,
       qValue: "",
     };
   },
@@ -37,9 +51,11 @@ export default {
 
 .logo {
   width: 150px;
+  filter: invert(1);
 }
 
 .search {
+  display: flex;
   border: none;
   color: $color-flix;
 }
