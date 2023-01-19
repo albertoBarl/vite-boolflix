@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="p-2">
+  <div class="header">
     <appHeader @search="getLists" />
   </div>
   <div class="p-5">
@@ -22,7 +22,7 @@ export default {
       store,
     };
   },
-  created() {
+  computed() {
     this.getLists();
   },
   methods: {
@@ -43,4 +43,15 @@ export default {
 @use "./styles/generals.scss" as *;
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/variables" as *;
+
+.header {
+  padding-top: 25px;
+  height: 250px;
+  background: rgb(0, 182, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 182, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7749300403755253) 100%
+  );
+}
 </style>

@@ -1,6 +1,6 @@
 <template lang="">
   <section>
-    <h2 class="text-white">Movies</h2>
+    <h2>Movies</h2>
     <div class="myList container-fluid">
       <movieCard
         v-for="(item, index) in store.movieList"
@@ -10,7 +10,7 @@
     </div>
   </section>
   <section class="mt-5">
-    <h2 class="text-white">TV Shows</h2>
+    <h2>TV Shows</h2>
     <div class="myList container-fluid">
       <TVCard v-for="(item, index) in store.TVList" :key="index" :tv="item" />
     </div>
@@ -41,5 +41,15 @@ export default {
   background-color: black;
   gap: 10px;
   margin-top: 25px;
+}
+
+h2 {
+  padding: 10px;
+  background: rgb(0, 182, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 182, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7749300403755253) 33%
+  );
 }
 </style>

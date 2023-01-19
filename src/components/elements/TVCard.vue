@@ -1,5 +1,5 @@
 <template lang="">
-  <div>
+  <div class="card">
     <img :src="`https://image.tmdb.org/t/p/w400${tv.poster_path}`" alt="-" />
     <div class="myCard">
       <div class="myTitle">
