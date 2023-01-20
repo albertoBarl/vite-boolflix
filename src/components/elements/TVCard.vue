@@ -40,4 +40,7 @@ export default {
 div {
   @include cardStructure;
 }
+.fs-3 {
+  color: gold;
+}
 </style>
